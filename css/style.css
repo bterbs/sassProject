@@ -186,7 +186,8 @@ footer::before {
   .main-content {
     width: 90%;
     max-width: 1000px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media (min-width: 992px) {

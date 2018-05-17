@@ -11,6 +11,8 @@ $color-bg-light: #009fe1;
 $font-stack-primary: 'Raleway', sans-serif;
 $font-stack-secondary: 'Bree Serif', serif;
 
+$max-width: 1000px;
+
 /* MIXINS ------------------------------------------------- */
 
 @mixin skewed {
@@ -20,6 +22,13 @@ $font-stack-secondary: 'Bree Serif', serif;
   height: 50px;
   position: absolute;
   transform: skewY(-2deg);
+}
+
+@mixin center {
+  width: 90%;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* BASE ------------------------------------------------- */
@@ -203,9 +212,7 @@ footer {
 
 @media (min-width: 768px) {
   .main-content {
-    width: 90%;
-    max-width: 1000px;
-    margin: 0 auto;
+    @include center
   }
 }
 
