@@ -1,3 +1,4 @@
+/* MIXINS ------------------------------------------------- */
 /* BASE ------------------------------------------------- */
 * {
   box-sizing: border-box;
@@ -24,7 +25,12 @@ ul {
   margin: 0;
 }
 
-
+p {
+  margin-bottom: 1.25em;
+}
+.intro p {
+  font-size: 1.2em;
+}
 
 a {
   color: #278da4;
@@ -69,6 +75,7 @@ footer {
   height: 100px;
   background-color: #eee;
   margin-top: 3.5em;
+  position: relative;
 }
 footer::before {
   content: "";
