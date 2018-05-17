@@ -31,14 +31,12 @@ header {
   background-blend-mode: multiply;
   background-size: cover;
 }
-
 header h1 {
   color: #fff;
   font-size: 4.8em;
   margin-bottom: 0;
   letter-spacing: 1px;
 }
-
 header p {
   color: #eeea72;
   font-size: 1.25em;
