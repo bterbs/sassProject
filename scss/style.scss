@@ -16,12 +16,15 @@ $max-width: 1000px;
 /* MIXINS ------------------------------------------------- */
 
 @mixin skewed {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 50px;
-  position: absolute;
-  transform: skewY(-2deg);
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    transform: skewY(-2deg);
+    @content;
+  }
 }
 
 @mixin center {
@@ -93,8 +96,7 @@ header {
     font-size: 1.25em;
     margin: 0;
   }
-  &::after {
-    @include skewed;
+  @include skewed {
     background-color: $white;
     bottom: -25px;
   }
@@ -106,8 +108,7 @@ footer {
   background-color: $color-shade;
   margin-top: 3.5em;
   position: relative;
-  &::before {
-    @include skewed;
+  @include skewed {
     background-color: $color-shade;
     top: -25px;
   }
