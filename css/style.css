@@ -24,12 +24,21 @@ ul {
   margin: 0;
 }
 
+a {
+  color: #278da4;
+  text-decoration: none;
+}
+a:hover {
+  color: #b13c69;
+}
+
 /* HEADER & FOOTER ----------------------------------------- */
 header {
   height: 460px;
   background: linear-gradient(#009fe1, #3acec2), url("../img/bg.jpg") no-repeat;
   background-blend-mode: multiply;
   background-size: cover;
+  position: relative;
 }
 header h1 {
   color: #fff;
@@ -43,11 +52,33 @@ header p {
   margin: 0;
 }
 
+header::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  transform: skewY(-2deg);
+  background-color: #fff;
+  bottom: -25px;
+}
+
 footer {
   padding: 2em 0 0;
   height: 100px;
   background-color: #eee;
   margin-top: 3.5em;
+}
+
+footer::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  transform: skewY(-2deg);
+  background-color: #eee;
+  top: -25px;
 }
 
 /* CONTAINERS ---------------------------------------------- */
@@ -74,6 +105,15 @@ footer {
   text-decoration: none;
   text-transform: uppercase;
   padding: 0.85em;
+}
+
+.img-featured {
+  width: 165px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  margin-top: 75px;
+  position: relative;
+  z-index: 100;
 }
 
 .card {

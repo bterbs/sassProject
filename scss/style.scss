@@ -1,7 +1,7 @@
 
 $white: #fff;
 $color-primary: #278da4;
-$color-secondary: #v13c69;
+$color-secondary: #b13c69;
 $color-accent: #eeea72;
 $color-shade: #eee;
 $color-text: #343434;
@@ -38,6 +38,14 @@ ul {
   margin: 0;
 }
 
+a {
+  color: $color-primary;
+  text-decoration: none;
+  &:hover {
+    color: $color-secondary;
+  }
+}
+
 /* HEADER & FOOTER ----------------------------------------- */
 
 header {
@@ -46,6 +54,7 @@ header {
               url('../img/bg.jpg') no-repeat;
   background-blend-mode: multiply;
   background-size: cover;
+  position: relative;
   h1 {
     color: $white;
     font-size: 4.8em;
@@ -59,11 +68,33 @@ header {
   }
 }
 
+header::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  transform: skewY(-2deg);
+  background-color: $white;
+  bottom: -25px;
+}
+
 footer {
   padding: 2em 0 0;
   height: 100px;
   background-color: $color-shade;
   margin-top: 3.5em;
+}
+
+footer::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  transform: skewY(-2deg);
+  background-color: $color-shade;
+  top: -25px;
 }
 
 /* CONTAINERS ---------------------------------------------- */
@@ -92,6 +123,15 @@ footer {
     text-transform: uppercase;
     padding: 0.85em;
   }
+}
+
+.img-featured {
+  width: 165px;
+  border: 4px solid $white;
+  border-radius: 50%;
+  margin-top: 75px;
+  position: relative;
+  z-index: 100;
 }
 
 .card {
